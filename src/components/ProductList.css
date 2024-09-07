@@ -31,4 +31,22 @@
     margin: 8px 0;
     color: #666;
   }
+  @media (max-width: 1200px) {
+    .product-grid {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .product-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .product-grid {
+      grid-template-columns: 1fr; /* 1 column */
+    }
+  }
+  
   
