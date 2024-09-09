@@ -1,16 +1,15 @@
-import React from 'react';
-import './ProductList.css'; // Import the CSS file
+import { Link } from 'react-router-dom';
 
 const ProductList = ({ products }) => {
   return (
     <div className="product-grid">
-      {products.map(product => (
-        <div className="product-card" key={product.id}>
-          <img src={product.image} alt={product.title} />
-          <h2>{product.title}</h2>
-          <p>{product.price}</p>
-          <p>{product.description}</p>
-          <p>Rating: {product.rating.rate} ({product.rating.count} reviews)</p>
+      {products.map((product) => (
+        <div key={product.id} className="product-card">
+          <Link to={`/product/${product.id}`}>
+            <img src={product.image} alt={product.title} />
+            <h3>{product.title}</h3>
+            <p>${product.price}</p>
+          </Link>
         </div>
       ))}
     </div>
