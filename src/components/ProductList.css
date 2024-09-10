@@ -1,52 +1,47 @@
-
 .product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
-    gap: 20px; /* Space between cards */
-    padding: 20px;
-  }
-  
-  .product-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 16px;
-    text-align: center;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  .product-card h2 {
-    font-size: 1.2em;
-    margin: 12px 0;
-  }
-  
-  .product-card p {
-    margin: 8px 0;
-    color: #666;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust the gap between cards if needed */
+  justify-content: center; /* Center align cards */
+}
 
-@media (max-width: 1200px) {
-    .product-grid {
-      grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    }
-  }
-  
-  @media (max-width: 900px) {
-    .product-grid {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    }
-  }
-  
-  @media (max-width: 600px) {
-    .product-grid {
-      grid-template-columns: 1fr; /* 1 column */
-    }
-  }
-  
-  
+.product-card {
+  width: calc(25% - 16px); /* 4 cards per row, with space for gaps */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+  background-color: #fff; /* Card background color */
+  border: 1px solid #ddd; /* Card border */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow */
+  overflow: hidden; /* Ensure content does not overflow */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition effects */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.product-card:hover {
+  transform: scale(1.03); /* Slightly enlarge the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.product-card img {
+  width: 100%; /* Full width image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.product-card .card-content {
+  padding: 15px; /* Padding inside the card */
+}
+
+.product-card h3 {
+  margin: 0; /* Remove default margin */
+  font-size: 1.1em; /* Font size for the product name */
+}
+
+.product-card p {
+  margin: 10px 0; /* Margin around the description */
+  color: #555; /* Text color */
+}
+
+.product-card .price {
+  font-weight: bold; /* Bold font for the price */
+  color: #333; /* Dark color for the price */
+}

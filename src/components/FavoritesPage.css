@@ -1,0 +1,32 @@
+.favorites-page {
+    padding: 20px;
+  }
+  
+  .product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between cards */
+  }
+  
+  .product-card {
+    width: calc(25% - 20px); /* Adjust width to fit 4 cards per row with gap */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-card h3 {
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .product-card p {
+    margin: 0;
+    color: #888;
+  }
+  
