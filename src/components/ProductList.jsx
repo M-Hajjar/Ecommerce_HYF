@@ -4,8 +4,13 @@ import { useFavorites } from '../context/FavoritesContext';
 import useFetch from '../hooks/useFetch';
 import './ProductList.css'; // Import the CSS file
 
-const ProductList = () => {
-  const { data: products, loading, error } = useFetch('https://fakestoreapi.com/products');
+const ProductList = ({ selectedCategory }) => {
+  // Fetch products based on selectedCategory
+  const url = selectedCategory === 'all'
+    ? 'https://fakestoreapi.com/products'
+    : `https://fakestoreapi.com/products/category/${selectedCategory}`;
+  
+  const { data: products, loading, error } = useFetch(url);
   const { toggleFavorite, isFavorite } = useFavorites();
 
   if (loading) return <p>Loading products...</p>;
@@ -39,4 +44,3 @@ const ProductList = () => {
 };
 
 export default ProductList;
-
