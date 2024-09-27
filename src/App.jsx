@@ -6,7 +6,7 @@ import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import FavoritesPage from './components/FavoritesPage';
 import CategoryList from './components/CategoryList';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState('all');
