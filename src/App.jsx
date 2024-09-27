@@ -5,7 +5,7 @@ import { FavoritesProvider } from './context/FavoritesContext';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import FavoritesPage from './components/FavoritesPage';
-import Navbar from './components/Navbar';
+import Navbar from './components/NavBar';
 
 function CategoryPageWrapper() {
   const { category } = useParams();
